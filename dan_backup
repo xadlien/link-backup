@@ -1,0 +1,24 @@
+#!/bin/bash
+
+ls /Users/martind/backup &> /dev/null
+if [ $? -ne 0 ]; then
+	echo "Archive drive not connected"
+	echo "connect drive to run this backup"
+	exit 1
+fi
+
+python /Users/martind/scripts/link_backup.py -d ~/code -b /Users/martind/backup/code_backup
+python /Users/martind/scripts/link_backup.py -d ~/Documents -b /Users/martind/backup/documents_backup
+python /Users/martind/scripts/link_backup.py -d ~/Movies -b /Users/martind/backup/movies_backup
+python /Users/martind/scripts/link_backup.py -d ~/Pictures -b /Users/martind/backup/pictures_backup
+python /Users/martind/scripts/link_backup.py -d ~/Virtual\ Machines -b /Users/martind/backup/vm_backup
+python /Users/martind/scripts/link_backup.py -d ~/books -b /Users/martind/backup/books_backup
+python /Users/martind/scripts/link_backup.py -d ~/docker -b /Users/martind/backup/docker_backup
+python /Users/martind/scripts/link_backup.py -d ~/finances -b /Users/martind/backup/finances_backup
+python /Users/martind/scripts/link_backup.py -d ~/games -b /Users/martind/backup/games_backup
+python /Users/martind/scripts/link_backup.py -d ~/images -b /Users/martind/backup/images_backup
+python /Users/martind/scripts/link_backup.py -d ~/resumes -b /Users/martind/backup/resumes_backup
+python /Users/martind/scripts/link_backup.py -d ~/scripts -b /Users/martind/backup/scripts_backup
+python /Users/martind/scripts/link_backup.py -d ~/travel -b /Users/martind/backup/travel_backup
+python /Users/martind/scripts/link_backup.py -d ~/universities -b /Users/martind/backup/universities_backup
+python /Users/martind/scripts/link_backup.py -d ~/work -b /Users/martind/backup/work_backup
