@@ -20,6 +20,9 @@ python $SCRIPTDIR/link_backup.py -d ~/docker -b $BACKUPDIR/docker_backup
 python $SCRIPTDIR/link_backup.py -d ~/finances -b $BACKUPDIR/finances_backup
 python $SCRIPTDIR/link_backup.py -d ~/games -b $BACKUPDIR/games_backup
 python $SCRIPTDIR/link_backup.py -d ~/resumes -b $BACKUPDIR/resumes_backup
-python $SCRIPTDIR/link_backup.py -d ~/scripts -b $BACKUPDIR/scripts_backup
 python $SCRIPTDIR/link_backup.py -d ~/travel -b $BACKUPDIR/travel_backup
 python $SCRIPTDIR/link_backup.py -d ~/work -b $BACKUPDIR/work_backup
+python $SCRIPTDIR/link_backup.py -d ~/apartments -b $BACKUPDIR/apartments_backup
+python $SCRIPTDIR/link_backup.py -d ~/exercism -b $BACKUPDIR/exercism_backup
+python $SCRIPTDIR/link_backup.py -d ~/images -b $BACKUPDIR/images_backup
+python $SCRIPTDIR/link_backup.py -d ~/linuxacademy -b $BACKUPDIR/linuxacademy_backup
