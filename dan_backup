@@ -14,6 +14,7 @@ python $SCRIPTDIR/link_backup.py -d ~/Documents -b $BACKUPDIR/documents_backup
 python $SCRIPTDIR/link_backup.py -d ~/Movies -b $BACKUPDIR/movies_backup
 python $SCRIPTDIR/link_backup.py -d ~/Pictures -b $BACKUPDIR/pictures_backup
 python $SCRIPTDIR/link_backup.py -d ~/Virtual\ Machines -b $BACKUPDIR/vm_backup
+python $SCRIPTDIR/link_backup.py -d ~/VirtualBox\ VMs -b $BACKUPDIR/vbox_backup
 python $SCRIPTDIR/link_backup.py -d ~/books -b $BACKUPDIR/books_backup
 python $SCRIPTDIR/link_backup.py -d ~/docker -b $BACKUPDIR/docker_backup
 python $SCRIPTDIR/link_backup.py -d ~/finances -b $BACKUPDIR/finances_backup
