@@ -5,7 +5,7 @@ import datetime
 import shutil
 
 #error codes:
-#   1 -d arg does not exist
+#   1 -d directory does not exist
 
 
 def main():
@@ -133,8 +133,8 @@ def compare_files(new_file_list, backup_from, backup_to, backup_dir):
 	mod_time_new = -1
 	mod_time_old = 1
         try:
-		mod_time_old = int(os.path.getmtime(new_file) * 100)
-        	mod_time_new = int(os.path.getmtime(latest_file) * 100)
+		mod_time_old = int(os.path.getmtime(new_file))
+        	mod_time_new = int(os.path.getmtime(latest_file))
         except OSError, e:
 		print("NOLINK:  " + latest_file + " not found!")
 	if mod_time_new == mod_time_old:

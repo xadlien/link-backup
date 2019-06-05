@@ -26,3 +26,4 @@ python $SCRIPTDIR/link_backup.py -d ~/apartments -b $BACKUPDIR/apartments_backup
 python $SCRIPTDIR/link_backup.py -d ~/exercism -b $BACKUPDIR/exercism_backup
 python $SCRIPTDIR/link_backup.py -d ~/images -b $BACKUPDIR/images_backup
 python $SCRIPTDIR/link_backup.py -d ~/linuxacademy -b $BACKUPDIR/linuxacademy_backup
+python $SCRIPTDIR/link_backup.py -d ~/git -b $BACKUPDIR/git_local_backup
