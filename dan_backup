@@ -30,5 +30,4 @@ python $SCRIPTDIR/link_backup.py -d ~/git -b $BACKUPDIR/git_local_backup
 python $SCRIPTDIR/link_backup.py -d ~/notes -b $BACKUPDIR/notes_backup
 python $SCRIPTDIR/link_backup.py -d ~/bible-study -b $BACKUPDIR/bible-study_backup
 python $SCRIPTDIR/link_backup.py -d /Applications -b $BACKUPDIR/applications_backup
-python $SCRIPTDIR/link_backup.py -d ~/Pictures -b $BACKUPDIR/pictures_backup
 
