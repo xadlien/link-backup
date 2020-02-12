@@ -11,7 +11,7 @@ if [ $? -ne 0 ]; then
 fi
 
 python $SCRIPTDIR/link_backup.py -d ~/apartments -b $BACKUPDIR/apartments_backup
-python $SCRIPTDIR/link_backup.py -d /Applications -b $BACKUPDIR/applications_backup
+#python $SCRIPTDIR/link_backup.py -d /Applications -b $BACKUPDIR/applications_backup
 python $SCRIPTDIR/link_backup.py -d ~/bible-study -b $BACKUPDIR/bible-study_backup
 python $SCRIPTDIR/link_backup.py -d ~/books -b $BACKUPDIR/books_backup
 python $SCRIPTDIR/link_backup.py -d ~/docker -b $BACKUPDIR/docker_backup
