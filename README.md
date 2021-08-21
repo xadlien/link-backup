@@ -6,3 +6,10 @@ This program was created for Unix systems to have an incremental backup.
 -b /path/to/backup/folder  
 ## Example
 `link-backup -d /home/user/Documents -b /backup/Documents  `
+## Building
+```
+make build-deb-setup
+make build-deb
+```
+## Installing
+`make install-deb`
