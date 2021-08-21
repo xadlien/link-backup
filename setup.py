@@ -6,8 +6,7 @@ setup(name='link-backup',
       url='https://github.com/xadlien/link-backup',
       author='Daniel Martin',
       author_email='djm24862@gmail.com',
-      packages=['link-backup'],
       entry_points = {
-          'console_scripts': ['link-backup=link-backup.__main__.main']
+          'console_scripts': ['link-backup=linkbackup.link_backup:main']
       },
       zip_safe=False)
