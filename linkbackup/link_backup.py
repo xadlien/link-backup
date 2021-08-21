@@ -60,18 +60,18 @@ def backup_files(backup_from, backup_to):
     #link latest to current
     if os.path.exists(backup_to + "/latest"):
         os.unlink(backup_to + "/latest")
-	time.sleep(1)
+    time.sleep(1)
 
     try:
         os.symlink(new_backup, backup_to + "/latest")
-    except OSError, e:
+    except OSError as e:
         print("COULD NOT LINK " + backup_to + "/latest" + " TO " + new_backup)
 
 def check_backup_paths(backup_from, backup_to):
     #check that to exists
     if not os.path.isdir(backup_to):
         #attempt to create backup dir
-        os.mkdir(backup_to, 0700)
+        os.mkdir(backup_to, 0o700)
 
     #check that from exists
     is_directory = False
@@ -80,7 +80,7 @@ def check_backup_paths(backup_from, backup_to):
     elif os.path.isdir(backup_from):
         is_directory = True
     else:
-        eprint("link_backup:  " + backup_from + " does not exist")
+        print("link_backup:  " + backup_from + " does not exist")
         exit(1)
 
     return is_directory
@@ -130,14 +130,14 @@ def compare_files(new_file_list, backup_from, backup_to, backup_dir):
         new_file = new_file_list[i]
         backup_file = backup_dir + "/" + new_file
         latest_file = backup_to + "/latest" + new_file
-	mod_time_new = -1
-	mod_time_old = 1
+        mod_time_new = -1
+        mod_time_old = 1
         try:
-		mod_time_old = int(os.path.getmtime(new_file))
-        	mod_time_new = int(os.path.getmtime(latest_file))
-        except OSError, e:
-		print("NOLINK:  " + latest_file + " not found!")
-	if mod_time_new == mod_time_old:
+            mod_time_old = int(os.path.getmtime(new_file))
+            mod_time_new = int(os.path.getmtime(latest_file))
+        except OSError as e:
+            print("NOLINK:  " + latest_file + " not found!")
+        if mod_time_new == mod_time_old:
             print("LINK: " + new_file)
             os.link(latest_file, backup_file)
             new_file_list.pop(i)
