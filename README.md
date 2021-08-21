@@ -5,4 +5,4 @@ This program was created for Unix systems to have an incremental backup.
 -d /path/to/folder/to/backup  
 -b /path/to/backup/folder  
 ## Example
-link-backup -d /home/user/Documents -b /backup/Documents  
+`link-backup -d /home/user/Documents -b /backup/Documents  `
