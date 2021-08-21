@@ -156,4 +156,5 @@ def copy_files(new_file_list, new_backup):
         #set mod time to be the same
         os.utime(new_backup + "/" + new_file, (acc_time, mod_time))
 
-main()
+if __name__ == "__main__":
+    main()
