@@ -34,24 +34,20 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-  build:
-    runs-on: self-hosted
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Setup Python
-      uses: actions/setup-python@v2.2.2
-      with:
-        python-version: 3.9.7
-        architecture: x64 
-        
     - name: python-build
       run: |
         # install needed package
         pip install wheel
         
-        # build source package
-        python setup.py sdist
-        
         # build package
-        python setup.py build
+        python setup.py sdist bdist_wheel bdist_egg
+        
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.API_TOKEN }}
+        file: dist/*
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "$tag release of link-backup from GitHub Actions"
