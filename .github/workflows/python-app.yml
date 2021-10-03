@@ -38,5 +38,13 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: python-stdeb
-      uses: lpenz/ghaction-python-stdeb@v0.3
+    - name: python-build
+      run: |
+        # install needed package
+        pip install wheel
+        
+        # build source package
+        python setup.py sdist
+        
+        # build package
+        python setup.py build
