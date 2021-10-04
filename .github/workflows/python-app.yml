@@ -51,3 +51,4 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
         body: "$tag release of link-backup from GitHub Actions"
+        file_glob: true
