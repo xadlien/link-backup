@@ -50,5 +50,5 @@ jobs:
         file: dist/*
         tag: ${{ github.ref }}
         overwrite: true
-        body: "$tag release of link-backup from GitHub Actions"
+        body: "${{ github.ref }} release of link-backup from GitHub Actions"
         file_glob: true
