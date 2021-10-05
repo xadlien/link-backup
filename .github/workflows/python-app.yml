@@ -42,12 +42,17 @@ jobs:
         
         # build package
         python setup.py sdist bdist_wheel bdist_egg
+
+    - name: get-version
+      run: |
+        VERSION=$(grep version setup.py | cut -d "'" -f 2)
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
         
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.API_TOKEN }}
         file: dist/*
-        tag: ${{ github.ref }}
+        tag: ${{ env.VERSION }}
         overwrite: true
         body: "$tag release of link-backup from GitHub Actions"
