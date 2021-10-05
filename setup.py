@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='link-backup',
-      version='0.1',
+      version='0.2',
       description='Program to create an incremental backup',
       url='https://github.com/xadlien/link-backup',
       author='Daniel Martin',
